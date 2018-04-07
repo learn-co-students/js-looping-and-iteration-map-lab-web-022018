@@ -1,19 +1,17 @@
-function lowerCaseDrivers (drivers) {
-  return drivers.map(function (x) {
-    return x.toLowerCase();
-  });
-}
-
-function nameToAttributes (drivers) {
-  return drivers.map(function (x) {
-    const first = x.split(' ')[0];
-    const last = x.split(' ')[1];
-    return {firstName: first, lastName: last};
+function lowerCaseDrivers(array) {
+  return array.map(function (x) {
+    return x.toLowerCase()
   })
 }
 
-function attributesToPhrase (drivers) {
-  return drivers.map(function (x) {
-    return x.name + ' is from ' + x.hometown
+function nameToAttributes(array) {
+  return array.map(function (x) {
+    return {firstName: x.split(' ')[0], lastName: x.split(' ')[1]}
+  })
+}
+
+function attributesToPhrase(array) {
+  return array.map(function (x) {
+    return `${x.name} is from ${x.hometown}`
   })
 }
